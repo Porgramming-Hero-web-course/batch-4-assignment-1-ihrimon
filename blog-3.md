@@ -61,7 +61,6 @@ class Cat extends Animal {
     this.sound = sound;
   }
 }
-
 function animalInfo(animal: Dog | Cat) {
   if (animal instanceof Dog) {
     console.log(`The ${animal.name} dog making sound ${animal.sound}`);
@@ -69,7 +68,6 @@ function animalInfo(animal: Dog | Cat) {
     console.log(`The ${animal.name} cat making sound ${animal.sound}`);
   }
 }
-
 const dog = new Dog("German Shefard", "Barking");
 const cat = new Cat("Oliver", "Meaw Meaw");
 
