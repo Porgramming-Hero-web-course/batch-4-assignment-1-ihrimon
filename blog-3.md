@@ -2,15 +2,13 @@
 
 Type Guard is a TypeScript feature commonly used for narrowing a type of variable or expression within a conditional block. It takes a variable with a unique property and returns a boolean or other variable type. Type guards work with a set of conditions to check whether a variable or expression is valid and safe by checking the type of the variable using typeof, instanceof, or custom type guard functions.
 
-There are several types of type guards in TypeScript, including type predicates, typeof guards, and instanceof guards.
-
 There are several types of type guards which are described as follows:
 
 - typeof guard
 - instanceof guard
 - in guard
 
-## Discuss Various Types of Type Guards and Their Use Cases: -->
+## Discuss Various Types of Type Guards and Their Use Cases: ==>
 
 ## 'typeof' guard.
 
@@ -79,7 +77,7 @@ animalInfo(dog);
 animalInfo(cat);
 ```
 
-#In this example, animal could be an instance of the Dog or Cat class. The instanceof type guard checks the class of animal and the function (animalInfo) calls the method based on the result.
+In this example, animal could be an instance of the Dog or Cat class. The instanceof type guard checks the class of animal and the function (animalInfo) calls the method based on the result.
 
 ## 'in' guard
 
