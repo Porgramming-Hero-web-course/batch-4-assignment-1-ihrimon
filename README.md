@@ -34,6 +34,36 @@ The **_typeof_** guard is used to narrow down the type (primitive types with str
 
 In this function check the primitive value number, string and boolen. If input value is not match these condition then not a return value.
 
+### `'in' guard `
+
+The **_'in'_** operator can be useful when working with objects and there's a need to check if they exist in the property.
+
+```typescript
+type JuniorDeveloper = {
+  name: string;
+  age: number;
+};
+
+type SeniorDeveloper = {
+  name: string;
+  age: number;
+  isTSExpert: boolean;
+};
+
+const developer = (dev: JuniorDeveloper | SeniorDeveloper) => {
+  if ("isTSExpert" in dev) {
+    console.log(`My name is ${dev.name} and expert in TypeScript`);
+  } else {
+    console.log(`My name is ${dev.name}`);
+  }
+};
+const junior: JuniorDeveloper = { name: "Rimon", age: 20 };
+const senior: SeniorDeveloper = { name: "Imam", age: 30, isTSExpert: true };
+developer(senior);
+```
+
+In this example, the in operator checks whether specific properties '_isTSExpert_' exist in the senior object.
+
 ### `'instanceof' guard `
 
 An **_instanceof_** guard is a built-in type guard that can be used to check if a variable or expression is an instance of a given constructor or class. Using this type guard test an object or property is drived from a base class.
@@ -78,36 +108,6 @@ animalInfo(cat);
 ```
 
 In this example, animal could be an instance of the Dog or Cat class. The _instanceof_ type guard checks the class of animal and the function (animalInfo) calls the method based on the result.
-
-### `'in' guard `
-
-The **_'in'_** operator can be useful when working with objects and there's a need to check if they exist in the property.
-
-```typescript
-type JuniorDeveloper = {
-  name: string;
-  age: number;
-};
-
-type SeniorDeveloper = {
-  name: string;
-  age: number;
-  isTSExpert: boolean;
-};
-
-const developer = (dev: JuniorDeveloper | SeniorDeveloper) => {
-  if ("isTSExpert" in dev) {
-    console.log(`My name is ${dev.name} and expert in TypeScript`);
-  } else {
-    console.log(`My name is ${dev.name}`);
-  }
-};
-const junior: JuniorDeveloper = { name: "Rimon", age: 20 };
-const senior: SeniorDeveloper = { name: "Imam", age: 30, isTSExpert: true };
-developer(senior);
-```
-
-In this example, the in operator checks whether specific properties '_isTSExpert_' exist in the senior object.
 
 ## Conclusion
 
