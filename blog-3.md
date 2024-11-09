@@ -112,3 +112,5 @@ In this example, the in operator checks whether specific properties 'isTSExpert'
 # Conclusion
 
 In this article, several types of type guards in TypeScript, describing a few examples to see them in action. Type Guards assuring the value of a type, improving the overall code more reliable, easier to maintain and type-safty.
+
+............................
