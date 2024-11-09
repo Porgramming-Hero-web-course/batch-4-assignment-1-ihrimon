@@ -50,11 +50,11 @@ type SeniorDeveloper = {
   isTSExpert: boolean;
 };
 
-const developer = (dev: JuniorDeveloper | SeniorDeveloper) => {
-  if ("isTSExpert" in dev) {
-    console.log(`My name is ${dev.name} and expert in TypeScript`);
+const developer = (developer: JuniorDeveloper | SeniorDeveloper) => {
+  if ("isTSExpert" in developer) {
+    console.log(`My name is ${developer.name} and expert in TypeScript`);
   } else {
-    console.log(`My name is ${dev.name}`);
+    console.log(`My name is ${developer.name}`);
   }
 };
 const junior: JuniorDeveloper = { name: "Rimon", age: 20 };
